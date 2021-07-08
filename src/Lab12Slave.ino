@@ -1,8 +1,8 @@
 /*
  * Project Lab12Slave
- * Description:
- * Author:
- * Date:
+ * Description: SLAVE
+ * Author: Vikash Kaushik
+ * Date: 7/8/21
  */
 //SLAVE
 SYSTEM_MODE(MANUAL);
@@ -23,8 +23,8 @@ void takeAction(uint8_t state)
 // setup() runs once, when the device is first turned on.
 void setup()
 {
-  pinMode(D7, OUTPUT);
-  pinMode(D5, INPUT);
+  pinMode(D7, OUTPUT); // led
+  pinMode(D5, INPUT); // button
   // Put initialization like pinMode and begin functions here.
   SPI1.setBitOrder(MSBFIRST);
   SPI1.setDataMode(SPI_MODE0);
@@ -39,7 +39,7 @@ void setup()
 void loop()
 {
   // The core of your code will likely live here.
-  
+  // if  1 or 0 just turn le on or off. ? read sbutton and sends to master.
 
   if(CS == true){
     CS = false;
